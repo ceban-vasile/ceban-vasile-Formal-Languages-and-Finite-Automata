@@ -20,13 +20,13 @@ class FunctionExpr extends Expr {
                 }
                 yield Math.sqrt(arguments.get(0).evaluate());
             }
-            case "logtwo" -> {
+            case "log" -> {
                 if (arguments.size() != 1) {
                     throw new RuntimeException("log2 expects exactly one argument");
                 }
                 yield Math.log(arguments.get(0).evaluate()) / Math.log(2);
             }
-            case "logten" -> {
+            case "lg" -> {
                 if (arguments.size() != 1) {
                     throw new RuntimeException("log10 expects exactly one argument");
                 }
@@ -38,7 +38,7 @@ class FunctionExpr extends Expr {
                 }
                 yield Math.log(arguments.get(0).evaluate());
             }
-            case "powtwo" -> {
+            case "pow" -> {
                 if (arguments.size() != 1) {
                     throw new RuntimeException("pow2 expects exactly one argument");
                 }
